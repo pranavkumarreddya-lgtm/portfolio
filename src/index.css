@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-pink-accent: #F472B6;
+  --color-rose-accent: #FB7185;
+  --color-fuchsia-accent: #E879F9;
+  --color-purple-accent: #C084FC;
+  --color-gold-accent: #FCD34D;
+  --color-bg-dark: #090514;
+  --color-bg-card: #130924;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #090514;
+  color: #F8FAFC;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090514;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f472b6, #e879f9, #c084fc);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fb7185, #fcd34d, #f472b6);
+}
+
+/* 3D and Glassmorphism Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.glass-card-dark {
+  background: rgba(23, 11, 38, 0.72);
+  backdrop-filter: blur(18px) saturate(190%);
+  -webkit-backdrop-filter: blur(18px) saturate(190%);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(35, 17, 56, 0.85);
+  border-color: rgba(244, 114, 182, 0.5);
+  box-shadow: 0 0 45px -5px rgba(244, 114, 182, 0.35),
+              0 0 20px -5px rgba(232, 121, 249, 0.25);
+}
+
+/* Neon Glow Shadow Utilities */
+.glow-pink {
+  box-shadow: 0 0 35px -5px rgba(244, 114, 182, 0.45);
+}
+
+.glow-rose {
+  box-shadow: 0 0 35px -5px rgba(251, 113, 133, 0.45);
+}
+
+.glow-fuchsia {
+  box-shadow: 0 0 35px -5px rgba(232, 121, 249, 0.45);
+}
+
+.glow-purple {
+  box-shadow: 0 0 35px -5px rgba(192, 132, 252, 0.45);
+}
+
+.glow-gold {
+  box-shadow: 0 0 35px -5px rgba(252, 211, 77, 0.45);
+}
+
+/* Feminine 3D Vibrant Text Gradients */
+.text-gradient-feminine {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #f472b6 0%, #e879f9 35%, #c084fc 70%, #fcd34d 100%);
+}
+
+.text-gradient-3d {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #f472b6 0%, #e879f9 50%, #c084fc 100%);
+}
+
+.text-gradient-gold {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #fcd34d 0%, #fb7185 100%);
+}
+
+.glow-text {
+  text-shadow: 0 0 25px rgba(244, 114, 182, 0.6);
+}
